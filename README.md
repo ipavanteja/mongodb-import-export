@@ -32,6 +32,32 @@ mongorestore --gzip --archive=/path/on/your/local/machine/dump.gz
 
 Replace `/path/on/your/local/machine/dump.gz` with the actual path to the dump file on your local machine.
 
+### Want to use just `mongodump` to download data in WSL ? Try this
+
+#### Install MongoDB Tools in WSL:
+- Open your WSL terminal.
+- Run the following commands to install the MongoDB tools:
+
+```nginx
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 656408E390CFB1F5
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org-tools
+```
+
+This will install the MongoDB tools package, which includes mongodump.
+
+#### Verify Installation:
+
+After the installation is complete, verify that mongodump is now available by running:
+
+```nginx
+mongodump --version
+```
+
+You should see the version information for mongodump, indicating that the command is now recognized.
+Now you should be able to run your mongodump command:
+
 ## MongoDB shell commands
 
 Below are some common MongoDB shell commands with clear examples. Please note that these examples assume a basic understanding of MongoDB concepts like databases, collections, documents, etc.
