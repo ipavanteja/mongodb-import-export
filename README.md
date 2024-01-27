@@ -56,7 +56,7 @@ mongodump --version
 ```
 
 You should see the version information for mongodump, indicating that the command is now recognized.
-Now you should be able to run your `mongodump` command:
+Now you should be able to run your [mongodump](#export-data-from-mongodb-atlas:) command:
 
 ## MongoDB shell commands
 
